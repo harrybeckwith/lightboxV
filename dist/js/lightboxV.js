@@ -217,7 +217,6 @@ var lightboxV = function () {
                 // go to next image in object
                 if (clickedData.currentIndex <= clickedData.groupDetails.length - 1) {
                     if (clickedData.currentIndex > 0) {
-                        console.log(clickedData.currentIndex);
                         clickedData.currentIndex--;
                         // display the updated html with next item
                         updateHTML(clickedData.groupDetails[clickedData.currentIndex]);
