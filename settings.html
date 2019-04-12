@@ -1,0 +1,57 @@
+A Lightbox in vanilla JS. The idea is to move away from jQuery and use vanilla JS to reduce the amount of code needed.
+
+
+
+1. Download lightbox v files
+
+Download
+
+*All the files you need are inside the dist/ folder.
+
+*Check the folder demo/index.html to get an idea of how lightboxV is set up.
+
+
+
+2. link the files up. These files can be found inside /dist folder.
+
+The lightboxV CSS needs to placed at the top of page inside
+
+<head> tag:
+    <link href="path/to/lightboxV.min.css" rel="stylesheet">
+    Add the lightboxV JavaScript before the closing </body> tag:
+    <script src="path/to/lightboxV.js" rel="stylesheet">
+        LightboxV Syntax
+        3. Thumbnail images can be wrapped like so:
+
+        <a href="images/1.jpg" class="lightbox-v" data-lightbox-v="your group" data-title="your caption">Your image</a>
+        Needed:
+        class="lightbox-v"
+        Optional:
+        data - lightbox - v="your group"
+        This groups your images, same groups will be together in the lightboxV slider.
+
+            data - title="your caption"
+        This places a caption underneath the lighboxV image.
+
+        Grouped images
+        Keep images in there groups by using the same word like so:
+
+        <a href="images/1.jpg" class="lightbox-v" data-lightbox-v="your group">Image 1</a>
+            <a href="images/2.jpg" class="lightbox-v" data-lightbox-v="your group">Image 2</a>
+            <a href="images/3.jpg" class="lightbox-v" data-lightbox-v="your group">Image 3</a>
+Settings
+        You can pass in an object with your settings, just place the settings above the js script file, like so:
+
+        let lightBoxVOptions = { maxWidth: 900, imageCount: true, border: true, noLoop: true, }
+
+            < script src = "path/to/lightboxV.js" >
+                Setting Options
+        The lightBoxVOptions that can be set are detailed below.Default true means this is already set, you can override by changing to false / setting type.Check the table below for the available settings.
+
+Name	Type	Default	Description
+        maxWidth	number	900	This is the max - width of the image inside the lightboxV in pixels.To increase or decrease edit the number.
+        imageCount	boolean	true	Keep count of the current image in the group.This will display underneath the image bottom left and will display e.g 'image 1 of 5'.
+        border	boolean	true	This places a white border around the image with a slight border radius.
+        noLoop	boolean	true	The slide show will only go to the last image and not loop round.The start and end of groups will remove the arrows where there is no more images in the group.
+        expand	boolean	false	If true an icon will appear to right above the image - which once clicked expands the image to a width of 1200px.Once expanded the icon can be clicked again to shrink to original size.
+        arrowsSm	boolean	false	If true the prev / next arrows will appear on smaller devices at a width of 768px.
